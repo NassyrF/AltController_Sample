@@ -983,13 +983,13 @@ MonoBehaviour:
   StarThedialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7262066350485730501}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7262066350485730502}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: StartDialog
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2893,6 +2893,7 @@ GameObject:
   - component: {fileID: 1579740982}
   - component: {fileID: 1579740981}
   - component: {fileID: 1579740985}
+  - component: {fileID: 1579740986}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -3006,6 +3007,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cee0a19743e4b7459187c1d548aa7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1579740986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579740980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703899ef7992d45bcbc5dd73f35b8a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::interactable
+  item: {fileID: 0}
 --- !u!1 &1761545804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,6 +3487,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6912733478174243638, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
+      propertyPath: yarnProject
+      value: 
+      objectReference: {fileID: 7545569452688597077, guid: 7bf98ee255f97a24f8c3ea5378624adf, type: 3}
+    - target: {fileID: 6912733478174243638, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
+      propertyPath: variableStorage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7500883944282100818, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -3525,16 +3547,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 3315005075288001486, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4821894495689309619, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 269412041168601314, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7262066350485730502}
   m_SourcePrefab: {fileID: 100100000, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
 --- !u!1 &7262066350485730501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 269412041168601314, guid: 74b789d2d992f384f856bb5ccaae3373, type: 3}
   m_PrefabInstance: {fileID: 3315118905460905841}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7262066350485730502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7262066350485730501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314fc5fa8e51749e39dc840a6800bc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  dialogReady: 0
+  dialogStarted: 0
+  dialoguePos: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

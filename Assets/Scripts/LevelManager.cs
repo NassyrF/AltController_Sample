@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System; 
 
+[Serializable]
+public class StringUnityEvent : UnityEvent<string> { }
 public class LevelManager : MonoBehaviour
 {
-    public UnityEvent<string> StarThedialogue;
+    public StringUnityEvent StarThedialogue;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
