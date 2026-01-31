@@ -28,7 +28,7 @@ public class RandomizeLimbs : MonoBehaviour
             if(r != null) 
             {
                 currentCat = r.GetCategory();
-                print(currentCat); //yay it works here
+                //print(currentCat); //yay it works here
                 labels = spriteLib.GetCategoryLabelNames(currentCat);
                 int count = labels.Count();
                 int index = Random.Range(0, count);

@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(this);
         }
 
+        dialogueRunner = GetComponent<DialogueRunner>();
     }
 
     // private void OnEnable()
@@ -46,17 +47,19 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         dialogueRunner = GetComponent<DialogueRunner>();
+        
+    }
 
-    }
-    public void LoadDialog(string node)
-    {
-        dialogueRunner.startNode = node;
-        dialogReady = true;
-    }
+    // public void LoadDialog(string node)
+    // {
+    //     dialogueRunner.startNode = node;
+    //     dialogReady = true;
+    // }
 
     public void StartDialog(string startNodeName)
     {
         print("Calling Dialogue Runner");
+        print(startNodeName);
         dialogueRunner.StartDialogue(startNodeName);
         
         // if (dialogReady && !dialogStarted)
@@ -70,6 +73,7 @@ public class DialogueManager : MonoBehaviour
         //     dialogStarted = true;
         // }
     }
+
     public void OnDialogOver()
     {
         if (DialogStart != null)
