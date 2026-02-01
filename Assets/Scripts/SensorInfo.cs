@@ -43,7 +43,7 @@ void Update()
             int.TryParse(datas[0], out buttonNum);
             int.TryParse(datas[1], out distance);
 
-            print(buttonNum);
+            //print(buttonNum);
             if(savedNum!=buttonNum){
                 buttonValueChanged.Invoke();
             }

@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public float desiredTime;
     //private List<string> playerPhrase;
     public UnityEvent<string> playerLetter;
+    public UnityEvent interrupt;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,12 +29,14 @@ public class PlayerInput : MonoBehaviour
 
 
 
-    public void OnInteract(){
+    public void theButton(){
         if(keyDown){
+            interrupt.Invoke();
             keyDown=false;
             constructSentence();
         }
         else{
+            
             keyDown=true;
         }
     }
