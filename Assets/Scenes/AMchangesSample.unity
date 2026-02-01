@@ -1157,6 +1157,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   morseUI: {fileID: 649620354}
+  speechUI: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +3807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ecd9d411c904941acdd8d7860a8568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+  pauseCanvas: {fileID: 0}
   desiredTime: 1
   playerLetter:
     m_PersistentCalls:
@@ -3822,6 +3824,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interrupt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1983254806
 Transform:
   m_ObjectHideFlags: 0
