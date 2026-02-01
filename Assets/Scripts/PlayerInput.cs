@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -56,5 +57,9 @@ public class PlayerInput : MonoBehaviour
 
             keyPressTime=0;
 
+    }
+
+    private void OnReplay(){
+        SceneManager.LoadScene(0);
     }
 }
