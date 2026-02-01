@@ -76,6 +76,7 @@ public class LevelManager : MonoBehaviour
     public void morseCorrect(){
         if(gameState==5){
             morseUI.SetActive(false);
+            HandAnimator.instance.triggerHands(false);
             gameState+=1;
             StarThedialogue.Invoke("Tuto4");
         }
@@ -84,6 +85,7 @@ public class LevelManager : MonoBehaviour
     public void morseIncorrect(){
         if(gameState==5){
             morseUI.SetActive(false);
+            HandAnimator.instance.triggerHands(false);
             StarThedialogue.Invoke("Tuto3a");
     }
     }

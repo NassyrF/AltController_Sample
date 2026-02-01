@@ -44,3 +44,126 @@ title: Tuto_Interrupt
 {$NPC1_Name} : Hey, don't interrupt me! If you get a thought and want to say it, wait until I'm done talking.
 {$NPC1_Name} : Try to <b><i>remember what you were going to say</i></b>.
 ===
+
+title: Corner1
+---
+{$NPC2_Name} : <b><i>Oh!</i></b> Hi...
+{$NPC2_Name} : You scared me... Didn't see you coming over...
+{$NPC2_Name} : Wow, I'm really cold.
+{$NPC2_Name} : It's freezing here, right? How do you feel?
+===
+
+title: Corner2
+---
+{$NPC2_Name} : Ugh, I feel weird...
+{$NPC2_Name} : Can you come over here? I wanna hang out...
+===
+
+title: Corner_Interrupt
+---
+{$NPC2_Name} : Hey, let me talk!
+{$NPC2_Name} : I forgot what I was going to say...
+===
+
+title: TooFar2
+---
+{$NPC2_Name} : Come hang out, it's lonely in the corner
+{$NPC2_Name} : The others have been fighting, it's soo exhausting...
+===
+
+title: Corner3
+---
+{$NPC2_Name} : Maybe I had too much...
+{$NPC2_Name} : I usually keep it together better, I'm sorry...
+{$NPC2_Name} : How much did you have?
+===
+
+title: CornerBad
+---
+{$NPC2_Name} : God, I'm too zonked for this.
+{$NPC2_Name} : What if I stay like this forever? I'm going to have such a hangover.
+{$NPC2_Name} : Leave me alone, I think I'm gonna throw up...
+===
+
+title: CornerGood
+---
+{$NPC2_Name} : Thank you for hanging out with me... I feel a little better now.
+{$NPC2_Name} : You should check on the others, things seemed rough earlier.
+===
+
+title: Table1
+---
+{$NPC3_Name} : Hey there!
+{$NPC3_Name} : God, I hope things aren't too awkward. This sucks.
+{$NPC3_Name} : Did you talk to your mom today? I saw her calling on your phone.
+===
+
+title: Table2
+---
+{$NPC3_Name} : Fair enough. How am I?
+{$NPC3_Name} : I'm like, alright, I guess. It's kind of a mess.
+{$NPC3_Name} : I'm really pissed at {$NPC1_Name}. I lowkey think all of this is on them.
+{$NPC3_Name} : But whatever.
+{$NPC3_Name} : Did you hear about all of it? You should sit, it's kinda crazy.
+===
+
+title: TooFar3
+---
+{$NPC3_Name} : No, for real, sit! You're swaying a bit.
+{$NPC3_Name} : How fucked up <b><i>are</i></b> you?
+===
+
+title: Table3
+---
+{$NPC3_Name} : I think I'll have to move out.
+{$NPC3_Name} : Or should {$NPC1_Name} move out? What do you think?
+===
+
+title: Table_Interrupt
+---
+{$NPC3_Name} : No, you don't get it!
+{$NPC3_Name} : Let me finish...
+===
+
+title: TableGood
+---
+{$NPC3_Name} : Thanks for hearing me out. I needed this.
+{$NPC3_Name} : I have no idea how to figure this out, though.
+===
+
+title: TableBad
+---
+{$NPC3_Name} : I think I need to be alone.
+{$NPC3_Name} : No offense, but I don't think you understand.
+{$NPC3_Name} : Maybe let's talk another time.
+===
+
+title: BestEnding
+---
+{$NPC1_Name} : Wow, you really have your shit together!
+{$NPC1_Name} : I feel like you might be the only one here who's not fucked up right now.
+{$NPC1_Name} : By the way, you should go talk to your mom. She's outside!
+{$NPC1_Name} : I'm sure she's not mad or anything.
+===
+
+title: MidEnding1
+---
+{$NPC1_Name} : Hey, could you stay out of what's going on with me and {$NPC3_Name}?
+{$NPC1_Name} : No offense, but I really don't need that right now.
+{$NPC1_Name} : By the way, your mom is outside. She seems worried.
+===
+
+title: MidEnding2
+---
+{$NPC1_Name} : God, it seems like both you and {$NPC2_Name} are kinda going through it.
+{$NPC1_Name} : You should probably go sleep it off or something.
+{$NPC1_Name} : But first, I think your mom is outside. She seems worried.
+===
+
+title: BadEnding
+---
+{$NPC1_Name} : Hey, so you freaked everyone out.
+{$NPC1_Name} : We're gonna have to talk about it once you feel better.
+{$NPC1_Name} : By the way, your mom is outside. She's been calling.
+{$NPC1_Name} : Would you mind asking her to take you home for the rest of the weekend?
+===
