@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 public class SensorInfo : MonoBehaviour
 {
-    SerialPort serial = new SerialPort("/dev/cu.usbmodem2101", 9600);
+    SerialPort serial = new SerialPort("COM6", 9600);
     public string received_string;
 
     public static int distance;

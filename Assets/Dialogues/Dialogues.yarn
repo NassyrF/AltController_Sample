@@ -24,10 +24,6 @@ title: TooFar1
 title: Tuto2
 ---
 {$NPC1_Name} : That's better, what's gotten into you? Are you... high right now?
-===
-
-title: Tuto3
----
 {$NPC1_Name} : You look like you want to <b><i>say</i></b> something. Go on, <b><i>you can talk</i></b>.
 ===
 
