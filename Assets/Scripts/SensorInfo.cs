@@ -4,7 +4,8 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Net.NetworkInformation;
 using System.IO.Pipes;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using UnityEngine.Events; 
 
 public class SensorInfo : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class SensorInfo : MonoBehaviour
 
     public static int distance;
     public static int buttonNum;
+    public UnityEvent buttonValueChanged;
+    private int savedNum;
 
     List<int> distanceList = new List<int>();
     [Range(0,100)] public int distanceListLength = 50;
@@ -40,7 +43,12 @@ void Update()
             int.TryParse(datas[0], out buttonNum);
             int.TryParse(datas[1], out distance);
 
-            //print(buttonNum);
+            print(buttonNum);
+            if(savedNum!=buttonNum){
+                buttonValueChanged.Invoke();
+            }
+            savedNum=buttonNum;
+
             //print(distance);
             measureDistance(distance);
         }

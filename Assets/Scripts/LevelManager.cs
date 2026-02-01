@@ -7,6 +7,8 @@ public class StringUnityEvent : UnityEvent<string> { }
 public class LevelManager : MonoBehaviour
 {
     public StringUnityEvent StarThedialogue;
+    public UnityEvent<int> NewMorse;
+    public GameObject morseUI;
     private int gameState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,17 +21,39 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //print(gameState);
     }
 
     public void dialogueOver(){
 
-        if (gameState==0) {
-            gameState+=1;
+        switch(gameState){
+            case 0 :
+                gameState+=1;
+                break;
+            case 2 :
+                gameState+=1;
+                break;
+            case 4 :
+                morseUI.SetActive(true);
+                NewMorse.Invoke(5);
+                gameState+=1;
+                break;
+            case 5 :
+                morseUI.SetActive(true);
+                NewMorse.Invoke(5);
+                break;
         }
-        else if(gameState==2){
-            gameState+=1;
-        }
+            
+        // if (gameState==0) {
+        //     gameState+=1;
+        // }
+        // else if(gameState==2){
+        //     gameState+=1;
+        // }
+        // else if(gameState==4){
+        //     morseUI.SetActive(true);
+        //     gameState+=1;
+        // }
     }
 
     public void WentBack(){
@@ -44,6 +68,21 @@ public class LevelManager : MonoBehaviour
             gameState+=1;
             StarThedialogue.Invoke("Tuto2");
         }
+    }
+
+    public void morseCorrect(){
+        if(gameState==5){
+            morseUI.SetActive(false);
+            gameState+=1;
+            StarThedialogue.Invoke("Tuto4");
+        }
+    }
+
+    public void morseIncorrect(){
+        if(gameState==5){
+            morseUI.SetActive(false);
+            StarThedialogue.Invoke("Tuto3a");
+    }
     }
 
     

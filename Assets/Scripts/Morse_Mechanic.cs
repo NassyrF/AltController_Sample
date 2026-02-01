@@ -8,6 +8,9 @@ public class Morse_Mechanic : MonoBehaviour
     public UnityEvent<string> changeDisplay;
     public int lengthOfMorse;
     private string morseSentence;
+    public UnityEvent<string> playerDisplay;
+    public UnityEvent morseCorrect;
+    public UnityEvent morseIncorrect;
     private List<string> code;
     private List<string> options;
     private List<string> playerMorse;
@@ -42,6 +45,7 @@ public class Morse_Mechanic : MonoBehaviour
     public void DisplayNewCode(){
         morseSentence=generateMorse(lengthOfMorse);
         changeDisplay.Invoke(morseSentence);
+        playerDisplay.Invoke(" ");
     }
 
 
@@ -50,6 +54,7 @@ public class Morse_Mechanic : MonoBehaviour
     public void ReceivePlayerLetter(string letter){
 
         playerMorse.Add(letter);
+        playerDisplay.Invoke(string.Join(" ",playerMorse));
         // print("INPUT SO FAR :"+string.Join(" ",playerMorse));
         // print("playerLen: "+playerMorse.Count.ToString());
         // print("puterLen: "+morseSentence.Length.ToString());
@@ -63,12 +68,15 @@ public class Morse_Mechanic : MonoBehaviour
     //Compares the values inputted by the player to the Computer's Morse string
     public void CompareInput(string playerSentence){
         if(playerSentence==morseSentence){
-            print("YAYYYY");
+            //print("YAYYYY");
+            morseCorrect.Invoke();
         }
         else{
-            print("NAURRRRR");
+            //print("NAURRRRR");
+            morseIncorrect.Invoke();
         }
         changeDisplay.Invoke(" ");
+        playerDisplay.Invoke(" ");
         StartCoroutine("NewMorseDelay");
     }
 

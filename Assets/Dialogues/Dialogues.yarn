@@ -36,7 +36,7 @@ title: Tuto4
 ---
 {$NPC1_Name} : Okay, if you say so... I guess I believe you...
 {$NPC1_Name} : Let's just hope your mom doesn't try to call you or something.
-{$NPC1_Name} : Just so you know, $NPC2_Name is tweaking out in the corner, so just like- don't be weird and freak her out.
+{$NPC1_Name} : Just so you know, {$NPC2_Name} is tweaking out in the corner, so just like- don't be weird and freak her out.
 ===
 
 title: Tuto_Interrupt

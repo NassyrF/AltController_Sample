@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class DisplayPlayerMorse : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class DisplayPlayerMorse : MonoBehaviour
         
     }
 
-    public void displayMe(string texter){
+    public void displayMe(string texter)
+    {
+        this.GetComponent<TMP_Text>().text=texter;
         
-    }
+            }
 }
