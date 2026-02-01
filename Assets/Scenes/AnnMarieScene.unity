@@ -415,8 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab897a5b74d647ca964cbd9eaa1e335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SensorInfo
-  received_string: 
-  datas: []
 --- !u!65 &2061733720
 BoxCollider:
   m_ObjectHideFlags: 0

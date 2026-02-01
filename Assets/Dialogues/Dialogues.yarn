@@ -1,4 +1,50 @@
-﻿title: Start
+﻿
+
+title: Start
 ---
 This is an example of a Yarn Spinner script. Write your dialogue here!
+===
+
+title: Tuto1
+---
+<<declare $playerName = "Y/N">>
+<<declare $NPC1_Name = "Nathifer">>
+<<declare $NPC2_Name = "Benfathan">>
+<<declare $NPC3_Name = "Samthanny">>
+{$NPC1_Name}:Hi {$playerName}!
+{$NPC1_Name} : Woah, woah, personal space!
+{$NPC1_Name} : Hey, {$playerName}, you're standing a little close there. You should take a <b><i>step backward</i></b>.
+===
+
+title: TooFar1
+---
+{$NPC1_Name} : Hey, not that far! Take a <b><i>step closer</i></b>.
+===
+
+title: Tuto2
+---
+{$NPC1_Name} : That's better, what's gotten into you? Are you... high right now?
+===
+
+title: Tuto3
+---
+{$NPC1_Name} : You look like you want to <b><i>say</i></b> something. Go on, <b><i>you can talk</i></b>.
+===
+
+title: Tuto3a
+---
+{$NPC1_Name} : I'm not sure that's what you wanted to say. Come again?
+===
+
+title: Tuto4
+---
+{$NPC1_Name} : Okay, if you say so... I guess I believe you...
+{$NPC1_Name} : Let's just hope your mom doesn't try to call you or something.
+{$NPC1_Name} : Just so you know, $NPC2_Name is tweaking out in the corner, so just like- don't be weird and freak her out.
+===
+
+title: Tuto_Interrupt
+---
+{$NPC1_Name} : Hey, don't interrupt me! If you get a thought and want to say it, wait until I'm done talking.
+{$NPC1_Name} : Try to <b><i>remember what you were going to say</i></b>.
 ===
