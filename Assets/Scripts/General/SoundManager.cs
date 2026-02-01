@@ -53,14 +53,15 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void MorseNoise(bool bol)
+    public void MorseNoise(string str)
     {
-        if (bol)
+        if (str == "dash")
         {
             //button is pressed
+            effectAudioSource.PlayOneShot(beep);
             
         }
-        else
+        else if (str == "dot")
         {
             //button is unpressed
         }    

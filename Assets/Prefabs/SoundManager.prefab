@@ -45,11 +45,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 69a0eb6489c7845739986027c478b1e7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.733
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -143,9 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4743d9fb60d174aa76e9bcc090cda2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectAudioSource: {fileID: 4937784618673470813}
+  musicAudioSource: {fileID: 8885334401796016390}
   GeneralVolume: 0.5
   playBackgroundMusic: 1
-  backgroundMusic: {fileID: 8300000, guid: c933f45727a5346ddbd4b1cebe30c350, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 69a0eb6489c7845739986027c478b1e7, type: 3}
+  beep: {fileID: 8300000, guid: 03a68d5d00e214dae9e8f3fc33b38776, type: 3}
 --- !u!82 &4937784618673470813
 AudioSource:
   m_ObjectHideFlags: 0
