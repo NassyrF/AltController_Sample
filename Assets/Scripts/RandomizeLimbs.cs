@@ -19,7 +19,7 @@ public class RandomizeLimbs : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         lib = gameObject.GetComponent<SpriteLibrary>();
-        spriteLib = lib.m_SpriteLibraryAsset;
+        //spriteLib = lib.m_SpriteLibraryAsset;
         anim.enabled = false;
 
         foreach (Transform child in gameObject.transform)
