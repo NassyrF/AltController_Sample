@@ -11,9 +11,9 @@ title: Tuto1
 <<declare $NPC1_Name = "Nathifer">>
 <<declare $NPC2_Name = "Benfathan">>
 <<declare $NPC3_Name = "Samthanny">>
-{$NPC1_Name}:Hi {$playerName}!
+{$NPC1_Name}:Hey dude!
 {$NPC1_Name} : Woah, woah, personal space!
-{$NPC1_Name} : Hey, {$playerName}, you're standing a little close there. You should take a <b><i>step backward</i></b>.
+{$NPC1_Name} : Hey, you're standing a little close there. You should take a <b><i>step backward</i></b>.
 ===
 
 title: TooFar1

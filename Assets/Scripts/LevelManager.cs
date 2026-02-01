@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public StringUnityEvent StarThedialogue;
     public UnityEvent<int> NewMorse;
     public GameObject morseUI;
+    public GameObject speechUI;
     private int gameState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,11 +36,13 @@ public class LevelManager : MonoBehaviour
                 break;
             case 4 :
                 morseUI.SetActive(true);
+                speechUI.SetActive(true);
                 NewMorse.Invoke(5);
                 gameState+=1;
                 break;
             case 5 :
                 morseUI.SetActive(true);
+                speechUI.SetActive(true);
                 NewMorse.Invoke(5);
                 break;
         }

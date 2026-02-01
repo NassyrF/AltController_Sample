@@ -19,9 +19,13 @@ public class PlayerInput : MonoBehaviour
     public float desiredTime;
     //private List<string> playerPhrase;
     public UnityEvent<string> playerLetter;
+
     private UnityEngine.InputSystem.PlayerInput playerInput; // fully qualified
     private InputActionAsset inputActions;
     private bool paused;
+
+    public UnityEvent interrupt;
+
 
      private void Awake()
     {
@@ -82,12 +86,14 @@ public class PlayerInput : MonoBehaviour
 
 
 
-    public void OnInteract(){
+    public void theButton(){
         if(keyDown){
+            interrupt.Invoke();
             keyDown=false;
             constructSentence();
         }
         else{
+            
             keyDown=true;
         }
     }
