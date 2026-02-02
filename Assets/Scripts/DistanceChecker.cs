@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DistanceChecker : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class DistanceChecker : MonoBehaviour
     private int currentLocation = 0;
 
     public static DistanceChecker instance;
+
+    public UnityEvent movedForward;
+    public UnityEvent movedBackward;
     public void Awake()
     {
         DistanceChecker.instance = this;
@@ -29,12 +33,14 @@ public class DistanceChecker : MonoBehaviour
     {
         if(dist > 10)
         {
+            movedForward.Invoke();
             print("MOVED FORWARD");
             // closer = true;
             // further = false;
         }
         else if(dist < -10)
         {
+            movedBackward.Invoke();
             print("MOVED BACKWARD");
             // closer = false;
             // further = true;

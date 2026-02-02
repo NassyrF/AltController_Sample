@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     public float desiredTime;
     //private List<string> playerPhrase;
     public UnityEvent<string> playerLetter;
+    public UnityEvent interrupt;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,12 +30,14 @@ public class PlayerInput : MonoBehaviour
 
 
 
-    public void OnInteract(){
+    public void theButton(){
         if(keyDown){
+            interrupt.Invoke();
             keyDown=false;
             constructSentence();
         }
         else{
+            
             keyDown=true;
         }
     }
@@ -53,5 +57,9 @@ public class PlayerInput : MonoBehaviour
 
             keyPressTime=0;
 
+    }
+
+    private void OnReplay(){
+        SceneManager.LoadScene(0);
     }
 }
