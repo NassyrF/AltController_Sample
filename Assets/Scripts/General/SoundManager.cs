@@ -13,6 +13,8 @@ public class SoundManager : MonoBehaviour
     public bool playBackgroundMusic;
     public AudioClip backgroundMusic;
 
+    public AudioClip beep;
+
     private void Awake()
     {
         if (Instance == null)
@@ -49,6 +51,20 @@ public class SoundManager : MonoBehaviour
             musicAudioSource.loop = true;
             musicAudioSource.Play();
         }
+    }
+
+    private void MorseNoise(bool bol)
+    {
+        if (bol)
+        {
+            //button is pressed
+            
+        }
+        else
+        {
+            //button is unpressed
+        }    
+        
     }
 
 
