@@ -1,9 +1,8 @@
 using UnityEngine;
 using System.IO.Ports;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Net.NetworkInformation;
-using System.IO.Pipes;
+// using System.Runtime.InteropServices;
+// using System.Net.NetworkInformation;
+// using System.IO.Pipes;
 using System.Collections.Generic;
 using UnityEngine.Events; 
 
@@ -28,6 +27,18 @@ public class SensorInfo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        bool foundPort = false;
+        string[] ports = SerialPort.GetPortNames();
+        foreach (string port in ports)
+            {
+                if (serial.PortName == port) { 
+                    Debug.Log("port found!"); 
+                    foundPort = true;
+                    break;
+                }
+            }
+        if (!foundPort) { Debug.Log("no port found!"); return;}
+        
         serial.Open();
         //the time it’ll wait to read
         serial.ReadTimeout = 50;
